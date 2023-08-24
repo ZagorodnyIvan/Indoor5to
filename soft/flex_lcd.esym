@@ -1,0 +1,10 @@
+D G "__PCH__" 0 38 ""5.093""
+D G "__DEVICE__" 0 38 ""
+D G "__DATE__" 0 38 ""12-Jul-23""
+D G "__TIME__" 0 38 ""14:31:50""
+D G "_UNICODE" 0 38 ""?""
+D G "__EVAL" 0 38 ""?"" "flex_lcd.c"
+D G "USE_LCD_RW" 0 20 "1"
+D G "lcd_type" 0 24 "2" "0=5x7, 1=5x10, 2=2 lines"
+D G "lcd_line_two" 0 25 "0x40" "LCD RAM address for the 2nd line"
+V G "LCD_INIT_STRING" 0 28 "[4]" `36 

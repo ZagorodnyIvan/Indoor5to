@@ -1,0 +1,61 @@
+[PROJECT]
+Target=Prueba relé.hex
+Processor_Text=PIC18F4620
+CCSVersion=5.093
+Compiler=PCH
+[Target Data]
+FileList=Prueba relé.c
+[Prueba relé.c]
+Type=4
+[mru-list]
+1=Prueba relé.c
+
+[defines]
+buildcount=13
+
+[ProjectLog]
+Days=4
+D1=12-07-2023
+D1_L=10
+D1_L1=[50298]Stopped Editing.
+TotalEdit=12
+TotalDebug=0
+D1_E=3
+D1_D=0
+D1_L2=[51223]Project Closed.
+D1_L3=[52588]Project Opened.
+D1_L4=[52680]Started Editing.
+D1_L5=[52710]Stopped Editing.
+D1_L6=[52710]Project Closed.
+D1_L7=[53510]Project Opened.
+D1_L8=[54915]Started Editing.
+D1_L9=[55216]Stopped Editing.
+D1_L10=[56640]Project Closed.
+D2=20-07-2023
+D2_L=3
+D2_L1=[76129]Project Opened.
+D2_L2=[76303]Started Editing.
+D2_L3=[76660]Stopped Editing.
+D3=22-07-2023
+D3_L=4
+D3_L1=[60562]Project Opened.
+D3_L2=[60583]Started Editing.
+D3_L3=[61382]Stopped Editing.
+D3_E=9
+D3_D=0
+D3_L4=[65493]Project Closed.
+D4=31-07-2023
+D4_L=2
+D4_L1=[56224]Project Opened.
+D4_L2=[57989]Project Closed.
+
+[Opened Files]
+1=Prueba relé.c
+t1=1
+Count=1
+
+[fileformats]
+forcecoff=0
+[Units]
+Count=1
+1=Prueba relé (main)

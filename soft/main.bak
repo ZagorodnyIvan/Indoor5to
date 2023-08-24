@@ -1,0 +1,280 @@
+#include "main.h"
+#include "hw.h"
+#include "flex_lcd.c"
+
+int1 nowtr = 0;
+int1 on = 0;
+int1 opressed = 0;
+int1 pressed = 0;
+int1 tick = 0;
+int1 sec = 0;
+int8 c1=0;
+int8 c2=0;
+int8 c3=0;
+int8 mode = 0;
+float oldtemp = 0;
+float oldhum = 0;
+int8 selectedo = 0;
+int8 line = 0;
+
+signed int8 maxt;
+signed int8 mint;
+signed int8 maxh;
+signed int8 minh;
+
+int8 CheckBut(int8 selectedb=100){
+   
+   int8 a = input_c();
+   int8 b = 0;
+   int8 i; 
+   if(selectedb == 100){
+      for(i = 3; i<8;i++){
+      if(bit_test(a,i)){
+         b = i-2;
+         break;
+         }
+      }
+   }
+   else{
+      switch(selectedb){
+      case 9:
+         b=(input(PIN_D7));
+         break;
+      default:
+         b = bit_test(a,selectedb+2);
+         break;
+      }
+   }
+   return(b);
+}
+
+void WriteConfig(int8 selectedo, int8 lines, int8 v){
+   if (selectedo==lines) printf(LCD_PUTC,"< ");
+   printf (LCD_PUTC "%d", v);
+   if (selectedo==lines) printf(LCD_PUTC," >");
+   printf (LCD_PUTC, "\n");
+}
+void Config(int8 selectedv);
+void Update(int8 but = 0){
+   
+   switch(mode){
+   
+      //Default
+      case 0:
+         nowtr = input(PIN_D6);
+         if(sec && nowtr){
+            printf(LCD_PUTC,"\fSIN AGUA");
+            break;
+         }
+         else{
+            set_adc_channel(0);
+            delay_us(10);
+            float temp = (float)read_adc()* 180 / 255 - 55;
+            set_adc_channel(1);
+            delay_us(10);
+            float hum = (float)read_adc()* 100 / 255;
+            //Regar
+            if(!nowtr){
+               if(hum<minh)output_bit(PIN_B0,1);
+               else if(hum>maxh) output_bit(PIN_B0,0);
+               if(temp<mint)output_bit(PIN_B1,1);
+               else if(temp>maxt) output_bit(PIN_B1,0);
+            }
+            if(temp != oldtemp || hum != oldhum){
+            
+               lcd_gotoxy(1,1);
+               printf(LCD_PUTC,"\f");
+               printf(LCD_PUTC,"C: %f \nHumedad: %f%%", temp, hum);
+               oldtemp= temp;
+               oldhum = hum;
+            }
+               if(but && !pressed){
+                  printf(LCD_PUTC,"\f");
+                  pressed = 1;
+                  mode = 1;
+                  Config(0);
+               }
+         break;
+         }
+      //Config
+      case 1:
+         if(but){
+            printf(LCD_PUTC,"\f");
+            int8 selectedv = 0;
+            switch(but){
+               case 1:
+                  if(!pressed){
+                     pressed=1;
+                     if(line>0) line -=1;
+                     if(selectedo>0){
+                        selectedo -=1;
+                        printf(LCD_PUTC,"\f");
+                     }
+                  }
+               break;
+               case 5:
+                  if(!pressed){
+                     pressed=1;
+                     if(line<2) line +=1;
+                     if(selectedo<3){
+                        selectedo +=1;
+                        printf(LCD_PUTC,"\f");
+                     }
+                  }
+               break;
+               case 2:
+                  selectedv =-1;
+               break;
+               case 4:
+                  selectedv =1;
+               break;
+               
+               case 3:
+                  if(!pressed){
+                     WRITE_EEPROM(0, maxt);
+                     WRITE_EEPROM(1, mint);
+                     WRITE_EEPROM(2, maxh);
+                     WRITE_EEPROM(3, minh);
+                     pressed = 1;
+                     mode = 0;
+                     oldtemp= 0;
+                     oldhum = 0;
+                  }
+               break;
+            }
+            
+            Config(selectedv);
+            
+         }
+         break;
+      
+         //Debug
+         case 3:
+         
+         break;
+         
+   }
+   //BUT
+   if(but == 0 && pressed){
+         pressed = 0;
+      }
+   
+}
+
+
+
+   
+//100us
+#int_TIMER2
+void  TIMER2_isr(void) 
+{
+   if (c1 >= 9){
+   //1ms
+      c1=0;
+         if (c2 >= 199){
+            output_toggle(PIN_B3);
+            c2 = 0;
+            tick = 1;
+            if(c3>=9){
+               sec = !sec;
+               c3=0;
+               if(nowtr){
+                  oldtemp= 0;
+                  oldhum = 0;
+               }
+            }
+            else c3++;
+         }
+         else c2++;
+   }
+   else c1++;
+}
+
+
+void main()
+{
+   setup_adc_ports(AN0_TO_AN1|VSS_VDD);
+   setup_adc(ADC_CLOCK_DIV_2|ADC_TAD_MUL_0);
+   setup_psp(PSP_DISABLED);
+   setup_spi(SPI_SS_DISABLED);
+   setup_wdt(WDT_OFF);
+   setup_timer_0(RTCC_INTERNAL);
+   setup_timer_1(T1_DISABLED);
+   setup_timer_2(T2_DIV_BY_1,199,1);
+   setup_comparator(NC_NC_NC_NC);
+   setup_vref(FALSE);
+   enable_interrupts(INT_TIMER2);
+   enable_interrupts(GLOBAL);
+   setup_oscillator(OSC_8MHZ|OSC_INTRC|OSC_NORMAL|OSC_PLL_OFF);
+   
+   lcd_init();
+   lcd_gotoxy(1,1);
+   output_bit(PIN_B0,0);
+   output_bit(PIN_B1,0);
+   lcd_gotoxy(1,1);
+   printf(LCD_PUTC,"\fOFF");
+   output_low(PIN_B3);
+   
+   while(1){
+      
+       //ONOFF
+      int1 onb=CheckBut(9);
+      if(!opressed){
+         if(onb){
+            on=!on;
+            opressed = 1;
+            if(!on) printf(LCD_PUTC,"\fOFF");
+            else{
+               printf(LCD_PUTC,"\fC: %f \nHumedad: %f%%", oldtemp, oldhum);
+               maxt = READ_EEPROM(0);
+               mint = READ_EEPROM(1);
+               maxh = READ_EEPROM(2);
+               minh = READ_EEPROM(3);
+            }
+         }
+      }
+      else if(!onb) opressed=0;
+      
+      
+      if(on && tick){
+         Update(CheckBut());
+         tick=0;
+      }
+   }
+}
+void Config(int8 selectedv){
+   switch(selectedo){
+      case 0:
+      maxt+=selectedv;
+      if(maxt > 125) maxt = 125;
+      break;
+      case 1:
+      mint+=selectedv;
+      if(mint < -55) mint = -55;
+      break;
+      case 2:
+      maxh+=selectedv;
+      if(maxh > 100) maxh = 100;
+      break;
+      case 3:minh+=selectedv;
+      if(minh < 0) minh = 0;
+      break;
+   }
+   if(line<1){
+      printf(LCD_PUTC,"MaxT: ");
+      WriteConfig(selectedo,0,maxt);
+   }
+   if(line<2){
+      printf(LCD_PUTC,"MinT: ");
+      WriteConfig(selectedo,1,mint);
+   }
+   if(line < 3 && line >  0){
+      printf(LCD_PUTC,"MaxH: ");
+      WriteConfig(selectedo,2,maxh);
+   }
+   if(line < 4 && line >  1){
+      printf(LCD_PUTC,"MinH: ");
+      WriteConfig(selectedo,3,minh);
+   }
+   lcd_gotoxy(1,1);
+}

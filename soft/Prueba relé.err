@@ -1,0 +1,5 @@
+Compiling C:\Users\ivanm\OneDrive\Escritorio\Colegio Labo\PROYECTO\soft\Prueba relé on 31-jul.-23 at 15:37
+>>> Warning 203 "C:\Users\ivanm\OneDrive\Escritorio\Colegio Labo\PROYECTO\soft\Prueba relé.c" Line 69(1,1): Condition always TRUE
+      Memory usage:   ROM=1%      RAM=1% - 1%
+      0 Errors,  1 Warnings.
+Build Successful.

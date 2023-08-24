@@ -1,0 +1,119 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004     @INTERRUPT_AREA
+005     @INTERRUPT_AREA
+006     @INTERRUPT_AREA
+007     @INTERRUPT_AREA
+008     @INTERRUPT_AREA
+009     @INTERRUPT_AREA
+00A     @INTERRUPT_AREA
+00B     @INTERRUPT_AREA
+00C     @INTERRUPT_AREA
+00D     @INTERRUPT_AREA
+00E     @INTERRUPT_AREA
+00F     @INTERRUPT_AREA
+010     @INTERRUPT_AREA
+011     @INTERRUPT_AREA
+012     @INTERRUPT_AREA
+013     @INTERRUPT_AREA
+014     @INTERRUPT_AREA
+015     @INTERRUPT_AREA
+016     @INTERRUPT_AREA
+017     @INTERRUPT_AREA
+018     @INTERRUPT_AREA
+019     c1
+01A     c2
+01B.0   rele
+01C     lcd_gotoxy.x
+01C     lcd_init.i
+01D     @delay_ms1.P1
+01D     lcd_gotoxy.y
+01D     lcd_init.@SCRATCH1
+01E     lcd_gotoxy.address
+01F     lcd_gotoxy.@SCRATCH1
+020     lcd_send_byte.address
+021     lcd_send_byte.n
+022     lcd_read_byte.low
+022     lcd_send_byte.@SCRATCH1
+023     lcd_read_byte.high
+023     lcd_send_nibble.nibble
+024.0   lcd_read_nibble.retval_0
+024     lcd_read_nibble.retval
+024.1   lcd_read_nibble.retval_1
+024.2   lcd_read_nibble.retval_2
+024.3   lcd_read_nibble.retval_3
+024     lcd_read_byte.@SCRATCH1
+F83     PSP_DATA
+FB4.6   C1OUT
+FB4.7   C2OUT
+FBB     CCP_2_LOW
+FBB     CCP_2
+FBC     CCP_2_HIGH
+FBE     CCP_1
+FBE     CCP_1_LOW
+FBF     CCP_1_HIGH
+FE1-FE2 @READ_PACKED_MEMORY.P1
+FE1-FE2 @WRITE_PACKED_MEMORY.P2
+FE9-FEA @READ_PROGRAM_MEMORY.P1
+FE9-FEA @READ_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PACKED_MEMORY.P3
+FE9-FEA @WRITE_PROGRAM_MEMORY.P4
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P1
+FF6-FF8 @READ_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+000004  Update
+0000AE  LCD_INIT_STRING.call
+0000BE  LCD_INIT_STRING.data
+0000C2  TIMER2_isr
+0000EC  @delay_ms1
+000112  lcd_send_nibble
+000152  lcd_read_nibble
+000184  lcd_read_byte
+0001A8  lcd_send_byte
+0001EA  lcd_init
+000238  lcd_gotoxy
+00025C  MAIN
+00025C  @cinit1
+00027C  @cinit2
+
+Project Directory:
+    C:\Users\ivanm\OneDrive\Escritorio\Colegio Labo\PROYECTO\soft\
+
+Project Files:
+    Prueba relé.c                                           [22-jul.-23 16:58  CRC=54B3E69C]
+    main.h                                                  [05-oct.-21 09:45  CRC=4458AA86]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18F4620.h [21-feb.-20 15:51  CRC=DD3680E5]
+    hw.h                                                    [20-oct.-21 14:31  CRC=73ABE372]
+    flex_lcd.c                                              [23-sep.-21 10:06  CRC=4FFA9E16]
+
+Source signature=89E431A5
+Program memory checksum=0000
+Hex file CRC=13FA
+
+Units:
+    C:\Users\ivanm\OneDrive\Escritorio\Colegio Labo\PROYECTO\soft\Prueba relé (main)
+
+Compiler Settings:
+    Processor:      PIC18F4620
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Output Files:
+    XREF file:   Prueba relé.xsym
+    Errors:      Prueba relé.err
+    Ext Symbols: Prueba relé.esym
+    INHX32:      Prueba relé.hex
+    Symbols:     Prueba relé.sym
+    List:        Prueba relé.lst
+    Debug/COFF:  Prueba relé.cof
+    Project:     Prueba relé.ccspjt
+    Call Tree:   Prueba relé.tre
+    Statistics:  Prueba relé.STA

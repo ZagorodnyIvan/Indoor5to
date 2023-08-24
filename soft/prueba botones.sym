@@ -1,0 +1,183 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004     @INTERRUPT_AREA
+005     @INTERRUPT_AREA
+006     @INTERRUPT_AREA
+007     @INTERRUPT_AREA
+008     @INTERRUPT_AREA
+009     @INTERRUPT_AREA
+00A     @INTERRUPT_AREA
+00B     @INTERRUPT_AREA
+00C     @INTERRUPT_AREA
+00D     @INTERRUPT_AREA
+00E     @INTERRUPT_AREA
+00F     @INTERRUPT_AREA
+010     @INTERRUPT_AREA
+011     @INTERRUPT_AREA
+012     @INTERRUPT_AREA
+013     @INTERRUPT_AREA
+014     @INTERRUPT_AREA
+015     @INTERRUPT_AREA
+016     @INTERRUPT_AREA
+017     @INTERRUPT_AREA
+018     @INTERRUPT_AREA
+019.0   on
+019.1   opressed
+019.2   pressed
+019.3   tick
+019.4   rele
+01A     c1
+01B     c2
+01C     mode
+01D     maxt
+01E     mint
+01F     maxh
+020     minh
+021-024 oldtemp
+025-028 oldhum
+029     selectedo
+02A     line
+02B-031 oB
+032     MAIN.i
+033     Update.but
+033     lcd_init.i
+033     MAIN.@SCRATCH1
+034-03A Update.botones
+034     lcd_init.@SCRATCH1
+034     MAIN.@SCRATCH2
+03B     Update.temp
+03C     Update.hum
+03D     Update.i
+03E     @PRINTF_U_721.P1
+03E-041 @FLT.P2
+03E     @PSTRINGCN_721.P3
+03E-041 @SFTOI.P4
+03E-03F @ITOF.P5
+03E     Update.@SCRATCH1
+03F     @PRINTF_U_721.P1
+03F     Update.@SCRATCH2
+03F     @PSTRINGCN_721.@SCRATCH1
+040     @DIV88.P1
+040     Update.@SCRATCH3
+040     @PSTRINGCN_721.@SCRATCH2
+041     lcd_putc.c
+041     @DIV88.P1
+041     Update.@SCRATCH4
+042-045 @FLT.P1
+042     @delay_ms1.P2
+042-045 @DIVFF.P3
+042-045 @MULFF.P4
+042     lcd_gotoxy.x
+042     @DIV88.@SCRATCH1
+043     lcd_gotoxy.y
+044     lcd_gotoxy.address
+045     lcd_gotoxy.@SCRATCH1
+046     lcd_send_byte.address
+046-049 @MULFF.P1
+046-049 @DIVFF.P2
+046     @FLT.@SCRATCH1
+047     lcd_send_byte.n
+047     @FLT.@SCRATCH2
+048     lcd_read_byte.low
+048     lcd_send_byte.@SCRATCH1
+049     lcd_send_nibble.nibble
+049     lcd_read_byte.high
+04A     lcd_read_nibble.retval
+04A.0   lcd_read_nibble.retval_0
+04A.1   lcd_read_nibble.retval_1
+04A.2   lcd_read_nibble.retval_2
+04A.3   lcd_read_nibble.retval_3
+04A     lcd_read_byte.@SCRATCH1
+04A     @MULFF.@SCRATCH1
+04A     @DIVFF.@SCRATCH1
+04B     @MULFF.@SCRATCH2
+04B     @DIVFF.@SCRATCH2
+04C     @MULFF.@SCRATCH3
+04C     @DIVFF.@SCRATCH3
+04D     @DIVFF.@SCRATCH4
+04E     @DIVFF.@SCRATCH5
+04F     @DIVFF.@SCRATCH6
+F83     PSP_DATA
+FB4.6   C1OUT
+FB4.7   C2OUT
+FBB     CCP_2_LOW
+FBB     CCP_2
+FBC     CCP_2_HIGH
+FBE     CCP_1_LOW
+FBE     CCP_1
+FBF     CCP_1_HIGH
+FE1-FE2 @WRITE_PACKED_MEMORY.P1
+FE1-FE2 @READ_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PROGRAM_MEMORY.P1
+FE9-FEA @WRITE_PACKED_MEMORY.P2
+FE9-FEA @READ_PROGRAM_MEMORY.P3
+FE9-FEA @READ_PACKED_MEMORY.P4
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P1
+FF6-FF8 @READ_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+0000AE  LCD_INIT_STRING.call
+0000BE  LCD_INIT_STRING.data
+0000C2  @const773.call
+0000E2  TIMER2_isr
+00010C  @delay_ms1
+000132  lcd_send_nibble
+000172  lcd_read_nibble
+0001A4  lcd_read_byte
+0001C8  lcd_send_byte
+00020A  lcd_init
+000258  lcd_gotoxy
+00027A  @ITOF
+0002B0  @MULFF
+0003A2  @DIVFF
+0004FC  @SFTOI
+000534  @FLT
+0005AA  lcd_putc
+0005EC  @DIV88
+000614  @PRINTF_U_721
+00067A  @PSTRINGCN_721
+00069A  Update
+00097A  @cinit1
+00097A  MAIN
+0009C8  @cinit2
+
+Project Directory:
+    C:\Users\ivanm\OneDrive\Escritorio\Colegio Labo\PROYECTO\soft\
+
+Project Files:
+    prueba botones.c                                        [02-ago.-23 15:37  CRC=2B76C9E2]
+    main.h                                                  [05-oct.-21 09:45  CRC=4458AA86]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18F4620.h [21-feb.-20 15:51  CRC=DD3680E5]
+    hw.h                                                    [20-oct.-21 14:31  CRC=73ABE372]
+    flex_lcd.c                                              [23-sep.-21 10:06  CRC=4FFA9E16]
+
+Source signature=60A714EB
+Program memory checksum=0000
+Hex file CRC=F1AA
+
+Units:
+    C:\Users\ivanm\OneDrive\Escritorio\Colegio Labo\PROYECTO\soft\prueba botones (main)
+
+Compiler Settings:
+    Processor:      PIC18F4620
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Output Files:
+    XREF file:   prueba botones.xsym
+    Errors:      prueba botones.err
+    Ext Symbols: prueba botones.esym
+    INHX32:      prueba botones.hex
+    Symbols:     prueba botones.sym
+    List:        prueba botones.lst
+    Debug/COFF:  prueba botones.cof
+    Project:     prueba botones.ccspjt
+    Call Tree:   prueba botones.tre
+    Statistics:  prueba botones.STA

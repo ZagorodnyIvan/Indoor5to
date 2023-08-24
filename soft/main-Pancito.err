@@ -1,0 +1,36 @@
+Compiling C:\Users\ivanm\OneDrive\Escritorio\Colegio Labo\PROYECTO\soft\main on 12-jul.-23 at 14:39
+*** Error 18 "C:\Users\ivanm\OneDrive\Escritorio\Colegio Labo\PROYECTO\soft\main.h" Line 1(9,20): File can not be opened
+    Not in "C:\Program Files\PICC\devices\18F4620.h"
+    Not in "C:\Program Files\PICC\drivers\18F4620.h"
+    Not in source "C:\Users\ivanm\OneDrive\Escritorio\Colegio Labo\PROYECTO\soft\18F4620.h"
+    Not in local "18F4620.h"
+    Not in project "C:\Users\ivanm\OneDrive\Escritorio\Colegio Labo\PROYECTO\soft\18F4620.h"
+    Not in default "C:\Users\ivanm\OneDrive\Escritorio\Colegio Labo\PROYECTO\soft\18F4620.h"
+*** Error 128 "C:\Users\ivanm\OneDrive\Escritorio\Colegio Labo\PROYECTO\soft\main.h" Line 2(9,14): A #DEVICE required before this line
+*** Error 128 "C:\Users\ivanm\OneDrive\Escritorio\Colegio Labo\PROYECTO\soft\main.h" Line 4(7,50): A #DEVICE required before this line
+*** Error 128 "C:\Users\ivanm\OneDrive\Escritorio\Colegio Labo\PROYECTO\soft\main.h" Line 5(7,68): A #DEVICE required before this line
+*** Error 128 "C:\Users\ivanm\OneDrive\Escritorio\Colegio Labo\PROYECTO\soft\main.h" Line 6(7,58): A #DEVICE required before this line
+*** Error 128 "C:\Users\ivanm\OneDrive\Escritorio\Colegio Labo\PROYECTO\soft\main.h" Line 7(7,63): A #DEVICE required before this line
+*** Error 128 "C:\Users\ivanm\OneDrive\Escritorio\Colegio Labo\PROYECTO\soft\main.h" Line 8(7,74): A #DEVICE required before this line
+*** Error 128 "C:\Users\ivanm\OneDrive\Escritorio\Colegio Labo\PROYECTO\soft\main.h" Line 9(7,49): A #DEVICE required before this line
+*** Error 128 "C:\Users\ivanm\OneDrive\Escritorio\Colegio Labo\PROYECTO\soft\main.h" Line 10(7,54): A #DEVICE required before this line
+*** Error 128 "C:\Users\ivanm\OneDrive\Escritorio\Colegio Labo\PROYECTO\soft\main.h" Line 11(7,49): A #DEVICE required before this line
+*** Error 128 "C:\Users\ivanm\OneDrive\Escritorio\Colegio Labo\PROYECTO\soft\main.h" Line 12(7,48): A #DEVICE required before this line
+*** Error 128 "C:\Users\ivanm\OneDrive\Escritorio\Colegio Labo\PROYECTO\soft\main.h" Line 13(7,69): A #DEVICE required before this line
+*** Error 128 "C:\Users\ivanm\OneDrive\Escritorio\Colegio Labo\PROYECTO\soft\main.h" Line 14(7,53): A #DEVICE required before this line
+*** Error 128 "C:\Users\ivanm\OneDrive\Escritorio\Colegio Labo\PROYECTO\soft\main.h" Line 15(7,91): A #DEVICE required before this line
+*** Error 128 "C:\Users\ivanm\OneDrive\Escritorio\Colegio Labo\PROYECTO\soft\main.h" Line 16(7,66): A #DEVICE required before this line
+*** Error 128 "C:\Users\ivanm\OneDrive\Escritorio\Colegio Labo\PROYECTO\soft\main.h" Line 17(7,63): A #DEVICE required before this line
+*** Error 128 "C:\Users\ivanm\OneDrive\Escritorio\Colegio Labo\PROYECTO\soft\main.h" Line 18(7,69): A #DEVICE required before this line
+*** Error 128 "C:\Users\ivanm\OneDrive\Escritorio\Colegio Labo\PROYECTO\soft\main.h" Line 19(7,61): A #DEVICE required before this line
+*** Error 128 "C:\Users\ivanm\OneDrive\Escritorio\Colegio Labo\PROYECTO\soft\main.h" Line 20(7,73): A #DEVICE required before this line
+*** Error 128 "C:\Users\ivanm\OneDrive\Escritorio\Colegio Labo\PROYECTO\soft\main.h" Line 21(7,75): A #DEVICE required before this line
+*** Error 128 "C:\Users\ivanm\OneDrive\Escritorio\Colegio Labo\PROYECTO\soft\main.h" Line 22(7,62): A #DEVICE required before this line
+*** Error 128 "C:\Users\ivanm\OneDrive\Escritorio\Colegio Labo\PROYECTO\soft\main.h" Line 23(7,63): A #DEVICE required before this line
+*** Error 128 "C:\Users\ivanm\OneDrive\Escritorio\Colegio Labo\PROYECTO\soft\main.h" Line 24(7,105): A #DEVICE required before this line
+*** Error 128 "C:\Users\ivanm\OneDrive\Escritorio\Colegio Labo\PROYECTO\soft\main.h" Line 25(7,91): A #DEVICE required before this line
+*** Error 128 "C:\Users\ivanm\OneDrive\Escritorio\Colegio Labo\PROYECTO\soft\main.h" Line 26(7,73): A #DEVICE required before this line
+*** Error 128 "C:\Users\ivanm\OneDrive\Escritorio\Colegio Labo\PROYECTO\soft\main.h" Line 27(7,56): A #DEVICE required before this line
+*** Error 128 "C:\Users\ivanm\OneDrive\Escritorio\Colegio Labo\PROYECTO\soft\flex_lcd.c" Line 25(9,15): A #DEVICE required before this line
+      27 Errors,  0 Warnings.
+Build Failed.

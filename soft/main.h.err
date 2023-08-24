@@ -1,0 +1,5 @@
+>>> Warning 206 "main.c" Line 62(1,1): Variable of this data type is never greater than this constant
+>>> Warning 204 "main.c" Line 62(1,1): Condition always FALSE
+>>> Warning 203 "main.c" Line 195(1,1): Condition always TRUE
+      Memory usage:   ROM=3%      RAM=1% - 1%
+      0 Errors,  3 Warnings.

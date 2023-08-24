@@ -1,0 +1,107 @@
+#include "main.h"
+#include "hw.h"
+#include "flex_lcd.c"
+
+int1 tick = 0;
+int1 ms = 0;
+int1 sec = 0;
+int8 c1=0;
+int8 c2=0;
+int8 c3=10;
+int8 adelay = 2;
+int8 pressed = 0;
+int8 forcc; 
+int8 but=0;
+float oldtemp = 0;
+float oldhum = 0;
+int8 tiempo=125;
+
+int8 selectedo = 0;
+int8 line = 0;
+int8 CheckBut(int8 selectedb=10){
+   int8 a = input_c();
+   int8 b = 0;
+   if(selectedb == 10){
+      for(forcc = 3; forcc<8;forcc++){
+      if(bit_test(a,forcc)){
+         b = forcc-2;
+         }
+      }
+   }
+   else{
+      b = bit_test(a,selectedb+2);
+   }
+   return(b);
+}
+
+void WriteConfig(int8 selectedo, int8 lines, int8 v){
+            if (selectedo==lines) printf(LCD_PUTC,"< ");
+            printf (LCD_PUTC "%u", v);
+            if (selectedo==lines) printf(LCD_PUTC," >");
+            printf (LCD_PUTC, "\n");
+}
+
+
+#int_TIMER2
+void  TIMER2_isr(void) 
+{
+   if (c1 >= 9){
+      c1=0;
+      if (c2 >= 100-adelay){
+         c2 = 0;
+         tick=1;
+      }
+      else c2++;
+      
+      if (tick){
+         if (c3 <= 1){
+            c3 = 5;
+            output_toggle(PIN_B0);
+         }
+         else c3--;
+      }
+   }
+   else c1++;
+}
+
+void Update(){
+   if (tick){
+      tick = 0;
+      
+      but = CheckBut();
+      lcd_gotoxy(1,1);
+      printf(LCD_PUTC,"\f");
+      if(but == 0 && pressed){
+         pressed = 0;
+      }
+   }
+}
+
+
+void main()
+{
+
+   setup_adc_ports(AN0_TO_AN1|VSS_VDD);
+   setup_adc(ADC_CLOCK_DIV_2|ADC_TAD_MUL_0);
+   setup_psp(PSP_DISABLED);
+   setup_spi(SPI_SS_DISABLED);
+   setup_wdt(WDT_OFF);
+   setup_timer_0(RTCC_INTERNAL);
+   setup_timer_1(T1_DISABLED);
+   setup_timer_2(T2_DIV_BY_1,199,1);
+   setup_comparator(NC_NC_NC_NC);
+   setup_vref(FALSE);
+   enable_interrupts(INT_TIMER2);
+   enable_interrupts(GLOBAL);
+   setup_oscillator(OSC_8MHZ|OSC_INTRC|OSC_NORMAL|OSC_PLL_OFF);
+   
+   lcd_init();
+   lcd_gotoxy(1,1);
+   output_bit(PIN_B0,0);
+   output_bit(PIN_B1,0);
+   while(1){
+   Update();
+   }
+   // TODO: USER CODE!!
+
+}

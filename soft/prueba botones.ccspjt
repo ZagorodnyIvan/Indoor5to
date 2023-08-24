@@ -1,0 +1,62 @@
+[PROJECT]
+Target=prueba botones.hex
+Processor_Text=PIC18F4620
+CCSVersion=5.093
+Compiler=PCH
+[Target Data]
+FileList=prueba botones.c
+[prueba botones.c]
+Type=4
+[mru-list]
+1=prueba botones.c
+
+[defines]
+buildcount=45
+
+[Opened Files]
+1=prueba botones.c
+t1=121
+Count=2
+2=Posible codigo principal.c
+t2=54
+
+[ProjectLog]
+Days=4
+D1=26-07-2023
+D1_L=2
+D1_L1=[73380]Stopped Editing.
+D1_L2=[73607]Started Editing.
+D2=27-07-2023
+D2_L=4
+D2_L1=[70747]Project Opened.
+D2_L2=[70816]Started Editing.
+D2_L3=[73032]Stopped Editing.
+TotalEdit=43
+TotalDebug=0
+D2_E=32
+D2_D=0
+D2_L4=[75147]Project Closed.
+D3=31-07-2023
+D3_L=2
+D3_L1=[53627]Project Opened.
+D3_L2=[56201]Project Closed.
+D4=02-08-2023
+D4_L=10
+D4_L1=[52771]Project Opened.
+D4_L2=[52782]Started Editing.
+D4_L3=[53082]Stopped Editing.
+D4_L4=[53170]Started Editing.
+D4_L5=[53784]Stopped Editing.
+D4_L6=[55474]Started Editing.
+D4_L7=[56057]Stopped Editing.
+D4_L8=[56241]Started Editing.
+D4_L9=[56558]Stopped Editing.
+D4_E=11
+D4_D=0
+D4_L10=[57426]Project Closed.
+
+[fileformats]
+forcecoff=0
+[Units]
+Count=1
+1=prueba botones (main)

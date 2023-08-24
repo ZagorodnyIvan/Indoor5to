@@ -1,0 +1,126 @@
+#include "main.h"
+#include "hw.h"
+#include "flex_lcd.c"
+
+int1 on = 1;
+int1 opressed = 0;
+int1 pressed = 0;
+int1 tick = 0;
+int8 c1=0;
+int8 c2=0;
+int8 mode = 0;
+int8 maxt = 75;
+int8 mint = 25;
+int8 maxh = 75;
+int8 minh = 25;
+float oldtemp = 0;
+float oldhum = 0;
+int8 selectedo = 0;
+int8 line = 0;
+
+int1 oB[7];
+
+
+int8 CheckBut(int8 selectedb=100){
+   
+   int8 a = input_c();
+   int8 b = 0;
+   int8 i; 
+   if(selectedb == 100){
+      for(i = 3; i<8;i++){
+      if(bit_test(a,i)){
+         b = i-2;
+         break;
+         }
+      }
+   }
+   else{
+      switch(selectedb){
+      case 9:
+         b=(input(PIN_D7));
+         break;
+      default:
+         b = bit_test(a,selectedb+2);
+         break;
+      }
+   }
+   return(b);
+}
+
+void Update(int8 but = 0){
+   int1 botones[7];
+   botones[0] = input(PIN_C3);
+   botones[1] = input(PIN_C4);
+   botones[2] = input(PIN_C5);
+   botones[3] = input(PIN_C6);
+   botones[4] = input(PIN_C7);
+   botones[5] = input(PIN_D6);
+   botones[6] = input(PIN_D7);
+    
+   for(int8 i = 0; i < 7; i++){
+      if(botones[i] == oB[i] ){
+         }
+         else {
+         printf(LCD_PUTC,"\f %u %u %u %u %u %u %u", botones[0], botones[1], botones[2], botones[3], botones[4], botones[5], botones[6]);
+         break;
+         }
+   }
+   
+   for(int8 i = 0; i < 7; i++){
+      oB[i]=botones[i];
+   }
+}
+   
+
+
+
+
+   
+//100us
+#int_TIMER2
+void  TIMER2_isr(void) 
+{
+   /*if (c1 >= 9){
+   //1ms
+      c1=0;
+         if (c2 >= 99){
+            c2 = 0;
+            tick = 1;
+         }
+         else c2++;
+   }
+   else c1++;
+   */
+}
+
+
+void main()
+{
+   setup_adc_ports(AN0_TO_AN1|VSS_VDD);
+   setup_adc(ADC_CLOCK_DIV_2|ADC_TAD_MUL_0);
+   setup_psp(PSP_DISABLED);
+   setup_spi(SPI_SS_DISABLED);
+   setup_wdt(WDT_OFF);
+   setup_timer_0(RTCC_INTERNAL);
+   setup_timer_1(T1_DISABLED);
+   setup_timer_2(T2_DIV_BY_1,199,1);
+   setup_comparator(NC_NC_NC_NC);
+   setup_vref(FALSE);
+   enable_interrupts(INT_TIMER2);
+   enable_interrupts(GLOBAL);
+   setup_oscillator(OSC_8MHZ|OSC_INTRC|OSC_NORMAL|OSC_PLL_OFF);
+   
+   lcd_init();
+   lcd_gotoxy(1,1);
+   output_bit(PIN_B3,0);
+   output_bit(PIN_B1,0);
+   lcd_gotoxy(1,1);
+   
+   for(int8 i = 0; i < 7; i++){
+      oB[i]=1;
+   }
+   while(1){
+     Update();
+   }
+
+}

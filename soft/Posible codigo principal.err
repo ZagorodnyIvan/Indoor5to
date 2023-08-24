@@ -1,0 +1,5 @@
+Compiling C:\Users\ivanm\OneDrive\Escritorio\Colegio Labo\PROYECTO\soft\Posible codigo principal on 02-ago.-23 at 14:39
+>>> Warning 203 "C:\Users\ivanm\OneDrive\Escritorio\Colegio Labo\PROYECTO\soft\Posible codigo principal.c" Line 207(1,1): Condition always TRUE
+      Memory usage:   ROM=6%      RAM=1% - 2%
+      0 Errors,  1 Warnings.
+Build Successful.

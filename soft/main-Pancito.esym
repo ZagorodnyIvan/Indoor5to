@@ -1,0 +1,22 @@
+D G "__PCH__" 3 38 ""5.093""
+D G "__DEVICE__" 3 38 ""
+D G "__DATE__" 3 38 ""12-Jul-23""
+D G "__TIME__" 3 38 ""14:39:56""
+D G "_UNICODE" 3 38 ""?""
+D G "__EVAL" 3 38 ""?""
+D G "_HW_H" 2 2 ""
+D G "LCD_DB4" 2 5 "PIN_D3"
+D G "LCD_DB5" 2 6 "PIN_D2"
+D G "LCD_DB6" 2 7 "PIN_D1"
+D G "LCD_DB7" 2 8 "PIN_D0"
+D G "LCD_RS" 2 10 "PIN_C0"
+D G "LCD_RW" 2 11 "PIN_C1"
+D G "LCD_E" 2 12 "PIN_C2"
+D G "USE_LCD_RW" 3 20 "1"
+D G "lcd_type" 3 24 "2" "0=5x7, 1=5x10, 2=2 lines"
+D G "lcd_line_two" 3 25 "0x40" "LCD RAM address for the 2nd line"
+V G "LCD_INIT_STRING" 3 28 "[4]" `40 
+F B "delay_ms" 1 0
+F B "delay_us" 1 0
+F B "delay_ms" 1 0
+F B "delay_us" 1 0

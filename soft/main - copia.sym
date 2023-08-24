@@ -1,0 +1,212 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004     @INTERRUPT_AREA
+005     @INTERRUPT_AREA
+006     @INTERRUPT_AREA
+007     @INTERRUPT_AREA
+008     @INTERRUPT_AREA
+009     @INTERRUPT_AREA
+00A     @INTERRUPT_AREA
+00B     @INTERRUPT_AREA
+00C     @INTERRUPT_AREA
+00D     @INTERRUPT_AREA
+00E     @INTERRUPT_AREA
+00F     @INTERRUPT_AREA
+010     @INTERRUPT_AREA
+011     @INTERRUPT_AREA
+012     @INTERRUPT_AREA
+013     @INTERRUPT_AREA
+014     @INTERRUPT_AREA
+015     @INTERRUPT_AREA
+016.0   on
+016.1   opressed
+016.2   pressed
+016.3   tick
+017     c1
+018     c2
+019     mode
+01A     maxt
+01B     mint
+01C     maxh
+01D     minh
+01E-021 oldtemp
+022-025 oldhum
+026     selectedo
+027     line
+028     but
+029.0   onb
+02A     Update.but
+02A     lcd_init.i
+02A     CheckBut.selectedb
+02B-02E Update.temp
+02B     CheckBut.a
+02B     lcd_init.@SCRATCH1
+02C     CheckBut.b
+02D     CheckBut.i
+02E     CheckBut.@SCRATCH1
+02F-032 Update.hum
+033     selectedv
+034-035 @ITOF.P1
+034-037 @FLT.P2
+034     WriteConfig.selectedo
+034-037 @PRINTF_L32D_88FPFPF.P1
+034     @PSTRINGCN_88.P2
+034     Update.@SCRATCH1
+034     @PSTRINGC_88.@SCRATCH1
+035     WriteConfig.lines
+035     Update.@SCRATCH2
+035     @PSTRINGCN_88.@SCRATCH1
+035     @PSTRINGC_88.@SCRATCH2
+036     WriteConfig.v
+036     Update.@SCRATCH3
+036     @PSTRINGCN_88.@SCRATCH2
+037     @PRINTF_U_88.P1
+037     Update.@SCRATCH4
+038-03B @DIVFF.P1
+038     @PRINTF_U_88.P2
+038-03B @FLT.P3
+038     @PRINTF_L32D_88FPFPF.P4
+039     @DIV88.P1
+039     @PRINTF_L32D_88FPFPF.@SCRATCH1
+03A     @DIV88.P1
+03A     @PRINTF_L32D_88FPFPF.@SCRATCH2
+03B     @DIV88.@SCRATCH1
+03B     @PRINTF_L32D_88FPFPF.@SCRATCH3
+03C-03F @DIVFF.P1
+03C     @FLT.@SCRATCH1
+03C     @PRINTF_L32D_88FPFPF.@SCRATCH4
+03D     @FLT.@SCRATCH2
+03D     @PRINTF_L32D_88FPFPF.@SCRATCH5
+03E     @PRINTF_L32D_88FPFPF.@SCRATCH6
+03F     @PRINTF_L32D_88FPFPF.@SCRATCH7
+040     @DIVFF.@SCRATCH1
+040     @PRINTF_L32D_88FPFPF.@SCRATCH8
+041-044 @DIV3232.P1
+041     lcd_putc.c
+041-044 @MULFF.P1
+041-044 @FTOSD.P2
+041     @DIVFF.@SCRATCH2
+042     @delay_ms1.P1
+042     lcd_gotoxy.x
+042     @DIVFF.@SCRATCH3
+043     lcd_gotoxy.y
+043     @DIVFF.@SCRATCH4
+044     lcd_gotoxy.address
+044     @DIVFF.@SCRATCH5
+045-048 @MULFF.P1
+045-048 @DIV3232.P2
+045     lcd_gotoxy.@SCRATCH1
+045     @DIVFF.@SCRATCH6
+045     @FTOSD.@SCRATCH1
+046     lcd_send_byte.address
+047     lcd_send_byte.n
+048     lcd_read_byte.low
+048     lcd_send_byte.@SCRATCH1
+049     lcd_read_byte.high
+049     lcd_send_nibble.nibble
+049     @MULFF.@SCRATCH1
+049     @DIV3232.@SCRATCH1
+04A     lcd_read_nibble.retval
+04A.0   lcd_read_nibble.retval_0
+04A.1   lcd_read_nibble.retval_1
+04A.2   lcd_read_nibble.retval_2
+04A.3   lcd_read_nibble.retval_3
+04A     lcd_read_byte.@SCRATCH1
+04A     @MULFF.@SCRATCH2
+04A     @DIV3232.@SCRATCH2
+04B     @MULFF.@SCRATCH3
+04B     @DIV3232.@SCRATCH3
+04C     @DIV3232.@SCRATCH4
+04D     @DIV3232.@SCRATCH5
+F83     PSP_DATA
+FB4.6   C1OUT
+FB4.7   C2OUT
+FBB     CCP_2_LOW
+FBB     CCP_2
+FBC     CCP_2_HIGH
+FBE     CCP_1_LOW
+FBE     CCP_1
+FBF     CCP_1_HIGH
+FE1-FE2 @READ_PACKED_MEMORY.P1
+FE1-FE2 @WRITE_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PROGRAM_MEMORY.P1
+FE9-FEA @READ_PROGRAM_MEMORY.P2
+FE9-FEA @READ_PACKED_MEMORY.P3
+FE9-FEA @WRITE_PACKED_MEMORY.P4
+FF6-FF8 @READ_PROGRAM_MEMORY.P1
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+010A  @delay_ms1
+0096  LCD_INIT_STRING
+0130  lcd_send_nibble
+0170  lcd_read_nibble
+01A2  lcd_read_byte
+01C6  lcd_send_byte
+0208  lcd_init
+0260  lcd_gotoxy
+05F0  lcd_putc
+0282  CheckBut
+093C  WriteConfig
+08AC  @DIV88
+08D4  @PRINTF_U_88
+0972  Update
+02F8  @ITOF
+032E  @MULFF
+0420  @DIVFF
+057A  @FLT
+00B4  @const149
+0634  @FTOSD
+0674  @DIV3232
+06EE  @PRINTF_L32D_88FPFPF
+086C  @PSTRINGCN_88
+0D7E  @goto10344
+0DAC  @goto10355
+00CA  @const165
+088C  @PSTRINGC_88
+00D2  @const167
+00DA  @const168
+00E2  @const169
+00EA  TIMER2_isr
+0DD8  MAIN
+0DD8  @cinit
+
+
+User Memory space: 
+
+User Memory space: 
+
+Project Directory:
+    C:\Users\ivanm\OneDrive\Escritorio\Colegio Labo\PROYECTO\soft\
+
+Project Files:
+    main - copia.c
+    main.h
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\devices\18F4620.h
+    hw.h
+    flex_lcd.c
+
+Units:
+    C:\Users\ivanm\OneDrive\Escritorio\Colegio Labo\PROYECTO\soft\main - copia (main)
+
+Compiler Settings:
+    Processor:      PIC18F4620
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    Errors:      main - copia.err
+    Ext Symbols: main - copia.esym
+    INHX32:      main - copia.hex
+    Symbols:     main - copia.sym
+    List:        main - copia.lst
+    Debug/COFF:  main - copia.cof
+    Project:     main - copia.PJT
+    Call Tree:   main - copia.tre
+    Statistics:  main - copia.sta

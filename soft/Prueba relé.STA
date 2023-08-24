@@ -1,0 +1,59 @@
+
+ROM used:   764/65536 (1%)
+            764/65536 (1%) including unused fragments
+
+            0.6 Average locations per line
+            7.6 Average locations per statement
+
+RAM used:   28/3968 (1%) at main() level
+            37/3968 (1%) worst case
+
+Stack used: 1 worst case (0 in main + 1 for interrupts)
+Stack size: 31
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   75    32  32  Prueba relé.c
+   31     0   0  main.h
+  865     0   0  ..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18F4620.h
+   16     0   0  hw.h
+  238    69  68  flex_lcd.c
+----- -----
+ 1225   101 Total
+
+Page ROM  %  RAM    Vol Diff  Functions:
+---- --- --- ---    --- ----  ----------
+0     38   2    1             @delay_ms1
+0     20   1    0             @const699
+0     64   4    1    328  2.7  lcd_send_nibble
+0     50   3    1    362  2.3  lcd_read_nibble
+0     36   2    3    165  3.3  lcd_read_byte
+0     66   4    3    319  4.1  lcd_send_byte
+0     78   5    2    384  4.4  lcd_init
+0     36   2    4    186  5.5  lcd_gotoxy
+0     42   3    0    204  4.9  TIMER2_isr
+0      4   0    0      3  0.0  Update
+0    160  10    0    592  2.9  MAIN
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               9
+    Statements              101
+    Comments                221
+    Volume (V)              3973
+    Difficulty (D)          30.3
+    Effort to implement (E) 120484
+    Time to implement (T)   1 hours, 52 minutes
+    Est Delivered Bugs (B)  1
+    Cyclomatic Complexity   6
+    Maintainability (MI)    149
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00002     4  0  
+00004-00006     4  0  
+00008-000AC   166  0  
+000AE-0FFFE   590  64772  
+
+
+

@@ -1,0 +1,12 @@
+Compiling C:\Users\ivanm\OneDrive\Escritorio\Colegio Labo\PROYECTO\soft\tuvieja on 03-ago.-23 at 16:17
+>>> Warning 203 "C:\Users\ivanm\OneDrive\Escritorio\Colegio Labo\PROYECTO\soft\tuvieja.c" Line 151(1,1): Condition always TRUE
+>>> Warning 202 "C:\Users\ivanm\OneDrive\Escritorio\Colegio Labo\PROYECTO\soft\tuvieja.c" Line 6(6,8): Variable never used:   on
+>>> Warning 202 "C:\Users\ivanm\OneDrive\Escritorio\Colegio Labo\PROYECTO\soft\tuvieja.c" Line 7(6,14): Variable never used:   opressed
+>>> Warning 202 "C:\Users\ivanm\OneDrive\Escritorio\Colegio Labo\PROYECTO\soft\tuvieja.c" Line 8(6,13): Variable never used:   pressed
+>>> Warning 202 "C:\Users\ivanm\OneDrive\Escritorio\Colegio Labo\PROYECTO\soft\tuvieja.c" Line 9(6,10): Variable never used:   tick
+>>> Warning 202 "C:\Users\ivanm\OneDrive\Escritorio\Colegio Labo\PROYECTO\soft\tuvieja.c" Line 15(6,10): Variable never used:   mode
+>>> Warning 202 "C:\Users\ivanm\OneDrive\Escritorio\Colegio Labo\PROYECTO\soft\tuvieja.c" Line 22(6,15): Variable never used:   selectedo
+>>> Warning 202 "C:\Users\ivanm\OneDrive\Escritorio\Colegio Labo\PROYECTO\soft\tuvieja.c" Line 23(6,10): Variable never used:   line
+      Memory usage:   ROM=4%      RAM=1% - 2%
+      0 Errors,  8 Warnings.
+Build Successful.

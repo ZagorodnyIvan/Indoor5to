@@ -1,0 +1,181 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004     @INTERRUPT_AREA
+005     @INTERRUPT_AREA
+006     @INTERRUPT_AREA
+007     @INTERRUPT_AREA
+008     @INTERRUPT_AREA
+009     @INTERRUPT_AREA
+00A     @INTERRUPT_AREA
+00B     @INTERRUPT_AREA
+00C     @INTERRUPT_AREA
+00D     @INTERRUPT_AREA
+00E     @INTERRUPT_AREA
+00F     @INTERRUPT_AREA
+010     @INTERRUPT_AREA
+011     @INTERRUPT_AREA
+012     @INTERRUPT_AREA
+013     @INTERRUPT_AREA
+014     @INTERRUPT_AREA
+015     @INTERRUPT_AREA
+016     @INTERRUPT_AREA
+017     @INTERRUPT_AREA
+018     @INTERRUPT_AREA
+019-01C a
+01D.0   on
+01D.1   opressed
+01D.2   pressed
+01D.3   tick
+01D.4   rele
+01D.5   cool
+01D.6   debug
+01E     c1
+01F     c2
+020     mode
+021     maxt
+022     mint
+023     maxh
+024     minh
+025     oldtemp
+026     oldhum
+027     selectedo
+028     line
+029-02F oB
+030     MAIN.i
+031     Update.but
+031     lcd_init.i
+031     MAIN.@SCRATCH1
+032-038 Update.botones
+032     lcd_init.@SCRATCH1
+032     MAIN.@SCRATCH2
+039     Update.temp
+03A     Update.hum
+03B     Update.i
+03C     @PSTRINGCN_721.P1
+03C     @PRINTF_U_721.P2
+03C-03F @SFTOI.P3
+03C-03D @ITOF.P4
+03C     Update.@SCRATCH1
+03D     @PRINTF_U_721.P1
+03D     Update.@SCRATCH2
+03D     @PSTRINGCN_721.@SCRATCH1
+03E     @DIV88.P1
+03E     Update.@SCRATCH3
+03E     @PSTRINGCN_721.@SCRATCH2
+03F     lcd_putc.c
+03F     @DIV88.P1
+03F     Update.@SCRATCH4
+040-043 @DIVFF.P1
+040     @delay_ms1.P2
+040-043 @MULFF.P3
+040     lcd_gotoxy.x
+040     @DIV88.@SCRATCH1
+041     lcd_gotoxy.y
+042     lcd_gotoxy.address
+043     lcd_gotoxy.@SCRATCH1
+044-047 @DIVFF.P1
+044-047 @MULFF.P2
+044     lcd_send_byte.address
+045     lcd_send_byte.n
+046     lcd_read_byte.low
+046     lcd_send_byte.@SCRATCH1
+047     lcd_read_byte.high
+047     lcd_send_nibble.nibble
+048.0   lcd_read_nibble.retval_0
+048     lcd_read_nibble.retval
+048.1   lcd_read_nibble.retval_1
+048.2   lcd_read_nibble.retval_2
+048.3   lcd_read_nibble.retval_3
+048     lcd_read_byte.@SCRATCH1
+048     @MULFF.@SCRATCH1
+048     @DIVFF.@SCRATCH1
+049     @MULFF.@SCRATCH2
+049     @DIVFF.@SCRATCH2
+04A     @MULFF.@SCRATCH3
+04A     @DIVFF.@SCRATCH3
+04B     @DIVFF.@SCRATCH4
+04C     @DIVFF.@SCRATCH5
+04D     @DIVFF.@SCRATCH6
+F83     PSP_DATA
+FB4.6   C1OUT
+FB4.7   C2OUT
+FBB     CCP_2_LOW
+FBB     CCP_2
+FBC     CCP_2_HIGH
+FBE     CCP_1_LOW
+FBE     CCP_1
+FBF     CCP_1_HIGH
+FE1-FE2 @READ_PACKED_MEMORY.P1
+FE1-FE2 @WRITE_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PROGRAM_MEMORY.P1
+FE9-FEA @READ_PROGRAM_MEMORY.P2
+FE9-FEA @WRITE_PACKED_MEMORY.P3
+FE9-FEA @READ_PACKED_MEMORY.P4
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P1
+FF6-FF8 @READ_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+0000AE  LCD_INIT_STRING.call
+0000BE  LCD_INIT_STRING.data
+0000C2  @const773.call
+0000E4  TIMER2_isr
+00010E  @delay_ms1
+000134  lcd_send_nibble
+000174  lcd_read_nibble
+0001A6  lcd_read_byte
+0001CA  lcd_send_byte
+00020C  lcd_init
+00025A  lcd_gotoxy
+00027C  @ITOF
+0002B2  @MULFF
+0003A4  @DIVFF
+0004FE  @SFTOI
+000536  lcd_putc
+000578  @PSTRINGCN_721
+000596  @DIV88
+0005BE  @PRINTF_U_721
+000624  Update
+00085C  MAIN
+00085C  @cinit1
+0008AA  @cinit2
+
+Project Directory:
+    C:\Users\ivanm\OneDrive\Escritorio\Colegio Labo\PROYECTO\soft\
+
+Project Files:
+    tuvieja.c                                               [03-ago.-23 16:17  CRC=D9E262B1]
+    main.h                                                  [05-oct.-21 09:45  CRC=4458AA86]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18F4620.h [21-feb.-20 15:51  CRC=DD3680E5]
+    hw.h                                                    [20-oct.-21 14:31  CRC=73ABE372]
+    flex_lcd.c                                              [23-sep.-21 10:06  CRC=4FFA9E16]
+
+Source signature=0F12ADBA
+Program memory checksum=0000
+Hex file CRC=6ADA
+
+Units:
+    C:\Users\ivanm\OneDrive\Escritorio\Colegio Labo\PROYECTO\soft\tuvieja (main)
+
+Compiler Settings:
+    Processor:      PIC18F4620
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Output Files:
+    XREF file:   tuvieja.xsym
+    Errors:      tuvieja.err
+    Ext Symbols: tuvieja.esym
+    INHX32:      tuvieja.hex
+    Symbols:     tuvieja.sym
+    List:        tuvieja.lst
+    Debug/COFF:  tuvieja.cof
+    Project:     tuvieja.ccspjt
+    Call Tree:   tuvieja.tre
+    Statistics:  tuvieja.STA

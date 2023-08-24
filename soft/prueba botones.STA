@@ -1,0 +1,69 @@
+
+ROM used:   2666/65536 (4%)
+            2666/65536 (4%) including unused fragments
+
+            2.1 Average locations per line
+            18.0 Average locations per statement
+
+RAM used:   53/3968 (1%) at main() level
+            80/3968 (2%) worst case
+
+Stack used: 6 worst case (5 in main + 1 for interrupts)
+Stack size: 31
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+  139    79  53  prueba botones.c
+   31     0   0  main.h
+  865     0   0  ..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18F4620.h
+   16     0   0  hw.h
+  238    69  47  flex_lcd.c
+----- -----
+ 1289   148 Total
+
+Page ROM  %  RAM    Vol Diff  Functions:
+---- --- --- ---    --- ----  ----------
+0     38   1    1             @delay_ms1
+0     20   0    0             @const699
+0     64   1    1    328  2.7  lcd_send_nibble
+0     50   1    1    362  2.3  lcd_read_nibble
+0     36   1    3    165  3.3  lcd_read_byte
+0     66   1    3    319  4.1  lcd_send_byte
+0     78   1    2    384  4.4  lcd_init
+0     34   1    4    186  5.5  lcd_gotoxy
+0     66   1    1    275  3.9  lcd_putc
+0    736  14   15   1754  7.8  Update
+0     54   1    2             @ITOF
+0    242   5   11             @MULFF
+0    346   6   14             @DIVFF
+0     56   1    4    204  4.9  @SFTOI
+0    118   2   10    748  5.3  @FLT
+0     32   1    0    748  5.3  @const773
+0     40   1    3    748  5.3  @DIV88
+0    102   2    2             @PRINTF_U_721
+0     32   1    3             @PSTRINGCN_721
+0     42   1    0    204  4.9  TIMER2_isr
+0    244   5    3    777  5.3  MAIN
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               14
+    Statements              148
+    Comments                205
+    Volume (V)              11550
+    Difficulty (D)          65.0
+    Effort to implement (E) 751235
+    Time to implement (T)   11 hours, 36 minutes
+    Est Delivered Bugs (B)  3
+    Cyclomatic Complexity   18
+    Maintainability (MI)    80
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00002     4  0  
+00004-00006     0  4  
+00008-000AC   166  0  
+000AE-0FFFE  2496  62866  
+
+
+

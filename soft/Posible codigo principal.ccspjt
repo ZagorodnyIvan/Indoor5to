@@ -1,0 +1,118 @@
+[PROJECT]
+Target=Posible codigo principal.hex
+Processor_Text=PIC18F4620
+CCSVersion=5.093
+Compiler=PCH
+[Target Data]
+FileList=Posible codigo principal.c
+[Posible codigo principal.c]
+Type=4
+[mru-list]
+1=Posible codigo principal.c
+
+[defines]
+buildcount=18
+
+[ProjectLog]
+Days=8
+D1=12-07-2023
+D1_L=4
+D1_L1=[52583]Stopped Editing.
+TotalEdit=26
+TotalDebug=0
+D1_E=5
+D1_D=0
+D1_L2=[52583]Project Closed.
+D1_L3=[52829]Project Opened.
+D1_L4=[53501]Project Closed.
+D2=13-07-2023
+D2_L=6
+D2_L1=[37434]Project Opened.
+D2_L2=[37450]Project Closed.
+D2_L3=[52184]Project Opened.
+D2_L4=[56577]Project Opened.
+D2_L5=[56717]Project Closed.
+D2_L6=[57255]Project Opened.
+D3=18-07-2023
+D3_L=4
+D3_L1=[63647]Project Opened.
+D3_L2=[64040]Project Closed.
+D3_L3=[72327]Project Opened.
+D3_L4=[75963]Project Closed.
+D4=22-07-2023
+D4_L=4
+D4_L1=[65526]Project Opened.
+D4_L2=[65548]Started Editing.
+D4_L3=[65848]Stopped Editing.
+D4_E=1
+D4_D=0
+D4_L4=[67200]Project Closed.
+D5=26-07-2023
+D5_L=6
+D5_L1=[71032]Project Opened.
+D5_L2=[71183]Started Editing.
+D5_L3=[71927]Stopped Editing.
+D5_E=13
+D5_D=0
+D5_L4=[71927]Project Closed.
+D5_L5=[71928]Project Opened.
+D5_L6=[72001]Project Closed.
+D6=29-07-2023
+D6_L=3
+D6_L1=[61205]Project Opened.
+D6_L2=[63719]Started Editing.
+D6_L3=[64146]Stopped Editing.
+D7=31-07-2023
+D7_L=2
+D7_L1=[53051]Project Opened.
+D7_L2=[53522]Project Closed.
+D8=02-08-2023
+D8_L=6
+D8_L1=[50394]Project Opened.
+D8_L2=[51308]Started Editing.
+D8_L3=[51852]Stopped Editing.
+D8_L4=[52635]Started Editing.
+D8_L5=[52764]Stopped Editing.
+D8_E=7
+D8_D=0
+D8_L6=[52764]Project Closed.
+
+[fileformats]
+forcecoff=0
+[trace]
+top=78
+left=78
+height=548
+width=587
+p2showall=0
+p2showmsg=0
+p3showall=0
+p3highlight=1
+p1msgs=0
+p1scroll=1
+p1trigger=0
+p3format=0
+p3seconds=3
+triggertype=0
+triggername=triggername
+screen=8
+[tracetimers]
+count=0
+
+[Opened Files]
+1=Posible codigo principal.c
+t1=177
+Count=4
+2=prueba botones.c
+t2=177
+3=Prueba relé.c
+t3=19
+4=flex_lcd.c
+t4=39
+
+[ExtraIncludes]
+Count=1
+1=posible codigo principal=c:\users\ivanm\onedrive\escritorio\colegio labo\proyecto\soft\prueba botones.c
+[Units]
+Count=1
+1=Posible codigo principal (main)

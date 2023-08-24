@@ -1,0 +1,16 @@
+Compiling C:\Users\ivanm\OneDrive\Escritorio\Colegio Labo\PROYECTO\soft\prueba botones on 02-ago.-23 at 15:37
+>>> Warning 203 "C:\Users\ivanm\OneDrive\Escritorio\Colegio Labo\PROYECTO\soft\prueba botones.c" Line 133(1,1): Condition always TRUE
+>>> Warning 202 "C:\Users\ivanm\OneDrive\Escritorio\Colegio Labo\PROYECTO\soft\prueba botones.c" Line 5(6,8): Variable never used:   on
+>>> Warning 202 "C:\Users\ivanm\OneDrive\Escritorio\Colegio Labo\PROYECTO\soft\prueba botones.c" Line 6(6,14): Variable never used:   opressed
+>>> Warning 202 "C:\Users\ivanm\OneDrive\Escritorio\Colegio Labo\PROYECTO\soft\prueba botones.c" Line 7(6,13): Variable never used:   pressed
+>>> Warning 202 "C:\Users\ivanm\OneDrive\Escritorio\Colegio Labo\PROYECTO\soft\prueba botones.c" Line 8(6,10): Variable never used:   tick
+>>> Warning 202 "C:\Users\ivanm\OneDrive\Escritorio\Colegio Labo\PROYECTO\soft\prueba botones.c" Line 12(6,10): Variable never used:   mode
+>>> Warning 202 "C:\Users\ivanm\OneDrive\Escritorio\Colegio Labo\PROYECTO\soft\prueba botones.c" Line 13(6,10): Variable never used:   maxt
+>>> Warning 202 "C:\Users\ivanm\OneDrive\Escritorio\Colegio Labo\PROYECTO\soft\prueba botones.c" Line 14(6,10): Variable never used:   mint
+>>> Warning 202 "C:\Users\ivanm\OneDrive\Escritorio\Colegio Labo\PROYECTO\soft\prueba botones.c" Line 15(6,10): Variable never used:   maxh
+>>> Warning 202 "C:\Users\ivanm\OneDrive\Escritorio\Colegio Labo\PROYECTO\soft\prueba botones.c" Line 16(6,10): Variable never used:   minh
+>>> Warning 202 "C:\Users\ivanm\OneDrive\Escritorio\Colegio Labo\PROYECTO\soft\prueba botones.c" Line 19(6,15): Variable never used:   selectedo
+>>> Warning 202 "C:\Users\ivanm\OneDrive\Escritorio\Colegio Labo\PROYECTO\soft\prueba botones.c" Line 20(6,10): Variable never used:   line
+      Memory usage:   ROM=4%      RAM=1% - 2%
+      0 Errors,  12 Warnings.
+Build Successful.

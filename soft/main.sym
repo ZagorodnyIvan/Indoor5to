@@ -1,0 +1,132 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004     @INTERRUPT_AREA
+005     @INTERRUPT_AREA
+006     @INTERRUPT_AREA
+007     @INTERRUPT_AREA
+008     @INTERRUPT_AREA
+009     @INTERRUPT_AREA
+00A     @INTERRUPT_AREA
+00B     @INTERRUPT_AREA
+00C     @INTERRUPT_AREA
+00D     @INTERRUPT_AREA
+00E     @INTERRUPT_AREA
+00F     @INTERRUPT_AREA
+010     @INTERRUPT_AREA
+011     @INTERRUPT_AREA
+012     @INTERRUPT_AREA
+013     @INTERRUPT_AREA
+014     @INTERRUPT_AREA
+015     @INTERRUPT_AREA
+016.0   tick
+016.1   ms
+016.2   sec
+017     c1
+018     c2
+019     c3
+01A     adelay
+01B     pressed
+01C     forcc
+01D     but
+01E-021 oldtemp
+022-025 oldhum
+026     tiempo
+027     selectedo
+028     line
+029     lcd_putc.c
+029     CheckBut.selectedb
+029     lcd_init.i
+02A     lcd_gotoxy.x
+02A     @delay_ms1.P1
+02A     CheckBut.a
+02A     lcd_init.@SCRATCH1
+02B     lcd_gotoxy.y
+02B     CheckBut.b
+02C     lcd_gotoxy.address
+02C     CheckBut.@SCRATCH1
+02D     lcd_gotoxy.@SCRATCH1
+02E     lcd_send_byte.address
+02F     lcd_send_byte.n
+030     lcd_read_byte.low
+030     lcd_send_byte.@SCRATCH1
+031     lcd_send_nibble.nibble
+031     lcd_read_byte.high
+032.0   lcd_read_nibble.retval_0
+032     lcd_read_nibble.retval
+032.1   lcd_read_nibble.retval_1
+032.2   lcd_read_nibble.retval_2
+032.3   lcd_read_nibble.retval_3
+032     lcd_read_byte.@SCRATCH1
+F83     PSP_DATA
+FB4.6   C1OUT
+FB4.7   C2OUT
+FBB     CCP_2_LOW
+FBB     CCP_2
+FBC     CCP_2_HIGH
+FBE     CCP_1_LOW
+FBE     CCP_1
+FBF     CCP_1_HIGH
+FE1-FE2 @WRITE_PACKED_MEMORY.P1
+FE1-FE2 @READ_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PROGRAM_MEMORY.P1
+FE9-FEA @READ_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PACKED_MEMORY.P3
+FE9-FEA @READ_PROGRAM_MEMORY.P4
+FF6-FF8 @READ_PROGRAM_MEMORY.P1
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+00EE  @delay_ms1
+0096  LCD_INIT_STRING
+0114  lcd_send_nibble
+0154  lcd_read_nibble
+0186  lcd_read_byte
+01AA  lcd_send_byte
+01EC  lcd_init
+0244  lcd_gotoxy
+02C8  lcd_putc
+0266  CheckBut
+00B4  TIMER2_isr
+030E  Update
+033A  MAIN
+033A  @cinit
+
+
+User Memory space: 
+
+User Memory space: 
+
+Project Directory:
+    C:\Users\ivanm\OneDrive\Escritorio\Colegio Labo\PROYECTO\soft\
+
+Project Files:
+    main.c
+    main.h
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\devices\18F4620.h
+    hw.h
+    flex_lcd.c
+
+Units:
+    C:\Users\ivanm\OneDrive\Escritorio\Colegio Labo\PROYECTO\soft\main (main)
+
+Compiler Settings:
+    Processor:      PIC18F4620
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    Errors:      main.err
+    Ext Symbols: main.esym
+    INHX32:      main.hex
+    Symbols:     main.sym
+    List:        main.lst
+    Debug/COFF:  main.cof
+    Project:     main.PJT
+    Call Tree:   main.tre
+    Statistics:  main.sta

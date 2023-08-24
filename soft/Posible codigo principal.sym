@@ -1,0 +1,219 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004     @INTERRUPT_AREA
+005     @INTERRUPT_AREA
+006     @INTERRUPT_AREA
+007     @INTERRUPT_AREA
+008     @INTERRUPT_AREA
+009     @INTERRUPT_AREA
+00A     @INTERRUPT_AREA
+00B     @INTERRUPT_AREA
+00C     @INTERRUPT_AREA
+00D     @INTERRUPT_AREA
+00E     @INTERRUPT_AREA
+00F     @INTERRUPT_AREA
+010     @INTERRUPT_AREA
+011     @INTERRUPT_AREA
+012     @INTERRUPT_AREA
+013     @INTERRUPT_AREA
+014     @INTERRUPT_AREA
+015     @INTERRUPT_AREA
+016     @INTERRUPT_AREA
+017     @INTERRUPT_AREA
+018     @INTERRUPT_AREA
+019.0   on
+019.1   opressed
+019.2   pressed
+019.3   tick
+01A     c1
+01B     c2
+01C     mode
+01D     maxt
+01E     mint
+01F     maxh
+020     minh
+021-024 oldtemp
+025-028 oldhum
+029     selectedo
+02A     line
+02B-02C @sprintf_string
+02D     MAIN.but
+02E.0   MAIN.onb
+02F     Update.but
+02F     lcd_init.i
+02F     CheckBut.selectedb
+030     CheckBut.a
+030-033 Update.temp
+030     lcd_init.@SCRATCH1
+031     CheckBut.b
+032     CheckBut.i
+033     CheckBut.@SCRATCH1
+034-037 Update.hum
+038     Update.selectedv
+039     @PSTRINGCN_721.P1
+039     WriteConfig.selectedo
+039-03A @ITOF.P1
+039-03C @FLT.P2
+039-03C @PRINTF_L32D_721FPFPF.P3
+039     Update.@SCRATCH1
+039     @PSTRINGC_721.@SCRATCH1
+03A     WriteConfig.lines
+03A     Update.@SCRATCH2
+03A     @PSTRINGCN_721.@SCRATCH1
+03A     @PSTRINGC_721.@SCRATCH2
+03B     WriteConfig.v
+03B     Update.@SCRATCH3
+03B     @PSTRINGCN_721.@SCRATCH2
+03C     @PRINTF_U_721.P1
+03C     Update.@SCRATCH4
+03D-040 @DIVFF.P1
+03D     @PRINTF_U_721.P2
+03D     @PRINTF_L32D_721FPFPF.P3
+03D-040 @FLT.P4
+03E     @DIV88.P1
+03E     @PRINTF_L32D_721FPFPF.@SCRATCH1
+03F     @DIV88.P1
+03F     @PRINTF_L32D_721FPFPF.@SCRATCH2
+040     @DIV88.@SCRATCH1
+040     @PRINTF_L32D_721FPFPF.@SCRATCH3
+041-044 @DIVFF.P1
+041     @FLT.@SCRATCH1
+041     @PRINTF_L32D_721FPFPF.@SCRATCH4
+042     @FLT.@SCRATCH2
+042     @PRINTF_L32D_721FPFPF.@SCRATCH5
+043     @PRINTF_L32D_721FPFPF.@SCRATCH6
+044     @PRINTF_L32D_721FPFPF.@SCRATCH7
+045     @DIVFF.@SCRATCH1
+045     @PRINTF_L32D_721FPFPF.@SCRATCH8
+046-049 @MULFF.P1
+046     lcd_putc.c
+046-049 @DIV3232.P1
+046-049 @FTOSD.P2
+046     @DIVFF.@SCRATCH2
+047     lcd_gotoxy.x
+047     @delay_ms1.P1
+047     @DIVFF.@SCRATCH3
+048     lcd_gotoxy.y
+048     @DIVFF.@SCRATCH4
+049     lcd_gotoxy.address
+049     @DIVFF.@SCRATCH5
+04A-04D @MULFF.P1
+04A-04D @DIV3232.P2
+04A     lcd_gotoxy.@SCRATCH1
+04A     @DIVFF.@SCRATCH6
+04A     @FTOSD.@SCRATCH1
+04B     lcd_send_byte.address
+04C     lcd_send_byte.n
+04D     lcd_read_byte.low
+04D     lcd_send_byte.@SCRATCH1
+04E     lcd_read_byte.high
+04E     lcd_send_nibble.nibble
+04E     @MULFF.@SCRATCH1
+04E     @DIV3232.@SCRATCH1
+04F.0   lcd_read_nibble.retval_0
+04F     lcd_read_nibble.retval
+04F.1   lcd_read_nibble.retval_1
+04F.2   lcd_read_nibble.retval_2
+04F.3   lcd_read_nibble.retval_3
+04F     lcd_read_byte.@SCRATCH1
+04F     @MULFF.@SCRATCH2
+04F     @DIV3232.@SCRATCH2
+050     @MULFF.@SCRATCH3
+050     @DIV3232.@SCRATCH3
+051     @DIV3232.@SCRATCH4
+052     @DIV3232.@SCRATCH5
+F83     PSP_DATA
+FB4.6   C1OUT
+FB4.7   C2OUT
+FBB     CCP_2
+FBB     CCP_2_LOW
+FBC     CCP_2_HIGH
+FBE     CCP_1
+FBE     CCP_1_LOW
+FBF     CCP_1_HIGH
+FE1-FE2 @WRITE_PACKED_MEMORY.P1
+FE1-FE2 @READ_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PROGRAM_MEMORY.P1
+FE9-FEA @WRITE_PACKED_MEMORY.P2
+FE9-FEA @READ_PACKED_MEMORY.P3
+FE9-FEA @READ_PROGRAM_MEMORY.P4
+FF6-FF8 @READ_PROGRAM_MEMORY.P1
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+0000AE  LCD_INIT_STRING.call
+0000BE  LCD_INIT_STRING.data
+0000C2  @const782.call
+0000D8  @const798.call
+0000E0  @const803.call
+0000E8  @const804.call
+0000F0  @const805.call
+0000F8  TIMER2_isr
+000118  @delay_ms1
+00013E  lcd_send_nibble
+00017E  lcd_read_nibble
+0001B0  lcd_read_byte
+0001D4  lcd_send_byte
+000216  lcd_init
+000264  lcd_gotoxy
+000286  CheckBut
+0002F8  @ITOF
+00032E  @MULFF
+000420  @DIVFF
+00057A  @FLT
+0005F0  lcd_putc
+000632  @PSTRINGCN_721
+000650  @FTOSD
+000690  @DIV3232
+00071E  @PRINTF_L32D_721FPFPF
+000896  @PSTRINGC_721
+0008B6  @DIV88
+0008DE  @PRINTF_U_721
+000946  WriteConfig
+00097C  Update
+000D7E  @goto13736
+000DA2  @goto13747
+000DC4  @cinit1
+000DC4  MAIN
+000E14  @cinit2
+
+Project Directory:
+    C:\Users\ivanm\OneDrive\Escritorio\Colegio Labo\PROYECTO\soft\
+
+Project Files:
+    Posible codigo principal.c                              [02-ago.-23 14:39  CRC=2EA3553A]
+    main.h                                                  [05-oct.-21 09:45  CRC=4458AA86]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18F4620.h [21-feb.-20 15:51  CRC=DD3680E5]
+    hw.h                                                    [20-oct.-21 14:31  CRC=73ABE372]
+    flex_lcd.c                                              [23-sep.-21 10:06  CRC=4FFA9E16]
+
+Source signature=63D3A043
+Program memory checksum=0000
+Hex file CRC=149E
+
+Units:
+    C:\Users\ivanm\OneDrive\Escritorio\Colegio Labo\PROYECTO\soft\Posible codigo principal (main)
+
+Compiler Settings:
+    Processor:      PIC18F4620
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Output Files:
+    XREF file:   Posible codigo principal.xsym
+    Errors:      Posible codigo principal.err
+    Ext Symbols: Posible codigo principal.esym
+    INHX32:      Posible codigo principal.hex
+    Symbols:     Posible codigo principal.sym
+    List:        Posible codigo principal.lst
+    Debug/COFF:  Posible codigo principal.cof
+    Project:     Posible codigo principal.ccspjt
+    Call Tree:   Posible codigo principal.tre
+    Statistics:  Posible codigo principal.STA
